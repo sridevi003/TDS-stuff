@@ -1,0 +1,24 @@
+name: My Test Action
+
+on:
+  push: # This triggers the action on every push to any branch.  You can customize this.
+    branches: [ main ] # Example: Only trigger on pushes to the 'main' branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Use a suitable runner environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 # This checks out your repository code
+
+      - name: 24f2007378@ds.study.iitm.ac.in  # Step name with your email address
+        run: echo "Hello from my action!"  # The command to execute
+
+      - name: Another step (example)
+        run: |
+          echo "This is another step."
+          echo "You can run multiple commands here."
+
+      - name: Yet another step
+        run: ls -l # Example: List files in the repository
